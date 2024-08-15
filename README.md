@@ -64,3 +64,11 @@ Here is a list of packages used in this setup:
 - [Rofi Theme](https://github.com/w8ste/Tokyonight-rofi-theme/tree/main)
 - [Sddm Theme](https://github.com/Keyitdev/sddm-flower-theme)
 
+## Details 🍔
+
+- [Vimplug](https://github.com/junegunn/vim-plug)
+- [OhMyZsh](https://github.com/ohmyzsh/ohmyzsh)
+- [Powerlevel10k_ohmyzsh](https://github.com/romkatv/powerlevel10k)
+- [fast-syntax-highlighting_ohmyzsh](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+- [zsh-syntax-highlighting_ohmyzsh](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [zsh-autosuggestions_ohmyzsh](https://github.com/zsh-users/zsh-autosuggestions)
