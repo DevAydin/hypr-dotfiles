@@ -61,6 +61,7 @@ Here is a list of packages used in this setup:
 ## Themes 🎨
 - [GTK Theme](https://www.gnome-look.org/p/1253385)
 - [Qt Theme](https://store.kde.org/p/1294013)
+- [Icons](https://store.kde.org/p/1305251)
 - [Rofi Theme](https://github.com/w8ste/Tokyonight-rofi-theme/tree/main)
 - [Sddm Theme](https://github.com/Keyitdev/sddm-flower-theme)
 
