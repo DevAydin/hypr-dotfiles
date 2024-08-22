@@ -74,6 +74,7 @@ Here is a list of packages used in this setup:
 
 ## Details 🍔
 
+- [Fix Dolphin not recognizing file associations](https://www.reddit.com/r/kde/comments/1bd313p/comment/l1jzfik/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 - [Vimplug](https://github.com/junegunn/vim-plug)
 - [OhMyZsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k_ohmyzsh](https://github.com/romkatv/powerlevel10k)
