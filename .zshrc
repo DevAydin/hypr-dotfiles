@@ -28,7 +28,6 @@ alias lf="lsd -ll"
 alias lfa="lsd -all"
 alias ttc="tty-clock -c -s -S"
 alias se="sudoedit"
-alias da="XDG_MENU_PREFIX=arch- kbuildsycoca6"
 #alias Arch
 #paru AUR  helper: https://github.com/Morganamilo/paru
 
@@ -57,6 +56,7 @@ sudo umount /mnt/HDB
 sudo umount /mnt/HDD"
 
 alias wt="curl wttr.in/Miandoab"
+export 'TESSDATA_PREFIX=/usr/share/tessdata/'
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
