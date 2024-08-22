@@ -45,15 +45,6 @@ alias pkinfo="sudo pacman -Si"
 alias pkl="sudo pacman -Qq"
 alias upkl="sudo pacman -Qeq"
 
-#alias for mount ntfs HDD 
-alias mtall="sudo mount /dev/sdb6 /mnt/HDC
-sudo mount /dev/sdb5 /mnt/HDB 
-sudo mount /dev/sdb1 /mnt/HDA
-sudo mount /dev/sdb7 /mnt/HDD"
-alias umtall="sudo umount /mnt/HDA 
-sudo umount /mnt/HDC 
-sudo umount /mnt/HDB
-sudo umount /mnt/HDD"
 
 alias wt="curl wttr.in/Miandoab"
 export 'TESSDATA_PREFIX=/usr/share/tessdata/'
