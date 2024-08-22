@@ -54,6 +54,13 @@ Here is a list of packages used in this setup:
 - `swaync`
 - `btop`
 - `pavucontrol`
+- `tesseract`
+- `tesseract-data-eng`
+- `tesseract-data-tur`
+- `tesseract-data-rus`
+- `tesseract-data-kor`
+- `tesseract-data-fas`
+- `tesseract-data-jpn`
 </details>
 
 
