@@ -11,7 +11,7 @@
 </details>
  
 
-##Packages 📦
+## Packages 📦
 
 Here is a list of packages used in this setup:
 <details> 
