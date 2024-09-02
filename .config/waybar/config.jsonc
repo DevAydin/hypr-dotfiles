@@ -1,0 +1,497 @@
+
+
+
+//__          __         _                   _____             __ _       
+//\ \        / /        | |                 / ____|           / _(_)      
+// \ \  /\  / /_ _ _   _| |__   __ _ _ __  | |     ___  _ __ | |_ _  __ _ 
+//  \ \/  \/ / _` | | | | '_ \ / _` | '__| | |    / _ \| '_ \|  _| |/ _` |
+//   \  /\  / (_| | |_| | |_) | (_| | |    | |___| (_) | | | | | | | (_| |
+//    \/  \/ \__,_|\__, |_.__/ \__,_|_|     \_____\___/|_| |_|_| |_|\__, |
+//                  __/ |                                            __/ |
+//                 |___/                                            |___/ 
+//                                                                                
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+{
+  "layer": "top",
+  "modules-left": [
+ "hyprland/window",
+    "hyprland/workspaces#roman",
+  ],
+  "modules-center": [
+    "clock",
+    "custom/weather",
+  ],
+
+  "modules-right": [
+    "custom/notification",
+    "hyprland/language",
+    "custom/playerctl",
+    "custom/media",
+    "group/motherboard",
+     "network",
+    "group/audio-grp",
+    "tray",
+  ],
+
+  "idle_inhibitor": {
+    "format": "<b>{icon}</b>",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
+    },
+    "tooltip": true
+  },
+  "mpd": {
+    "tooltip": false,
+    "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-stopped": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-disconnected": "",
+    "state-icons": {
+      "stopped": "󰓛",
+      "playing": "󰏤",
+      "paused": "󰐊"
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 24
+  },
+"hyprland/workspaces": {
+	"active-only": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": [],
+	},
+	"format-icons": {
+		"active": "",
+		"default": "",
+	},
+},
+// ROMAN Numerals style
+"hyprland/workspaces#roman": {
+	"active-only": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": [],
+	},
+	"format-icons": {
+		"1": "I",
+		"2": "II",
+		"3": "III",
+		"4": "IV",
+		"5": "V",
+		"6": "VI",
+		"7": "VII",
+		"8": "VIII",
+		"9": "IX",
+		"10": "X",
+	},
+},
+// PACMAN Style
+"hyprland/workspaces#pacman": {
+	"active-only": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"show-special": false,
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": [],
+	},
+	"format": "{icon}",
+	"format-icons": {
+            "active": "<span font='12'>󰮯</span>",
+            "empty": "<span font='8'></span>",
+            "default": "󰊠",
+	},
+},
+// Kanji / Japanese style
+"hyprland/workspaces#kanji": {
+	"disable-scroll": true,
+	"show-special": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": [],
+	},
+	"format-icons": {
+		"1": "一",
+		"2": "二",
+		"3": "三",
+		"4": "四",
+		"5": "五",
+		"6": "六",
+		"7": "七",
+		"8": "八",
+		"9": "九",
+		"10": "十",
+	}
+},
+//  NUMBERS and ICONS style
+"hyprland/workspaces#4": {
+	"format": "{name}",
+	"format": " {name} {icon} ",
+	//"format": " {icon} ",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"all-outputs": true,
+	"sort-by-number": true,
+	"format-icons": {
+		"1": " ",
+		"2": " ",
+		"3": " ",
+		"4": " ",
+		"5": " ",
+		"6": " ",
+		"7": "",
+		"8": " ",
+		"9": "",
+		"10": "10",
+		"focused": "",
+		"default": "",
+	},
+},
+// NUMBERS and ICONS style with window rewrite
+"hyprland/workspaces#rw": {
+	"disable-scroll": true,
+	"all-outputs": true,
+	"warp-on-scroll": false,
+	"sort-by-number": true,
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"format": "{icon} {windows}",
+	"format-window-separator": " ",
+	"window-rewrite-default": " ",
+	"window-rewrite": {
+		"title<.*youtube.*>": " ",
+		"title<.*amazon.*>": " ",
+		"title<.*reddit.*>": " ",
+		"title<.*Picture-in-Picture.*>": " ",
+		"class<firefox>": " ",
+		"class<kitty>": " ",
+		"class<konsole>": " ",
+		"class<thunar>": "󰝰 ",
+		"class<discord>": " ",
+		"class<WebCord>": " ",
+		"class<subl>": "󰅳 ",
+		"class<celluloid>": " ",
+		"class<Cider>": "󰎆 ",
+		"class<code-oss>": "󰨞 ",
+		"class<codium|codium-url-handler|VSCodium>": "󰨞 ",
+		"class<codeblocks>": "󰅩 ",
+		"class<mousepad>": " ",
+		"class<libreoffice-writer>": " ",
+		"class<libreoffice-startcenter>": "󰏆 ",
+		"class<com.obsproject.Studio>": " "
+		}   
+},
+// for Camilla or Spanish
+"hyprland/workspaces#cam": {
+	"active-only":false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"persistent-workspaces":{
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": []
+	},
+		"format-icons": {
+		"1": "Uno",
+		"2": "Due",
+		"3": "Tre",
+		"4": "Quattro",
+		"5": "Cinque",
+		"6":"Sei",
+		"7":"Sette",
+		"8":"Otto",
+		"9":"Nove",
+		"10":"Dieci"
+	}	
+},
+
+  "backlight": {
+    "tooltip": false,
+    "format": "{icon} {}%",
+    "interval": 1,
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "on-scroll-up": "brightness set 5%+",
+    "on-scroll-down": "brightness set 5%-",
+    "smooth-scrolling-threshold": 1
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {icon} {capacity}%",
+    "format-plugged": " {icon} {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d, %Y (%I:%M %p)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+ "cpu": {
+	"format": "{usage}%  ",
+	"interval": 1,
+	"min-length": 5,
+	"format-alt-click": "click",
+	"format-alt": "{icon0}{icon1}{icon2}{icon3} {max_frequency}GHz 󰍛",
+	"format-icons": [
+		"▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+	],
+	"on-click-right": "konsole -e btop",
+}, 
+"memory": {
+	"interval": 10,
+	"format": "{used:0.1f}G ",
+	"format-alt": "{percentage}% 󰾆",
+	"format-alt-click": "click",
+	"tooltip": true,
+	"tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+	"on-click-right": "konsole -e btop"
+},
+
+
+
+  "group/motherboard": {
+    "orientation": "horizontal",
+    "children-class": "motherboard-item",
+    "modules": [
+      "cpu",
+      "memory",
+    ]
+  },
+  "group/audio-grp": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+    ]
+  },
+   "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+	"ignored-sinks": ["Easy Effects Sink"],
+	"max-volume": 150,
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+          // "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+		"on-click-middle": "pulseaudio-control --node-blacklist 'easyeffects_sink' next-node",
+        "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+    },
+      "network": {
+	 "on-click-right": "konsole -e nmtui",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+	"interval": 1,
+        "format-linked": "{ifname} (No IP) ",
+        "format": "",
+        "format-disconnected": " Disconnected",
+        "format-alt": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+       // "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
+        "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}\n{ifname}\n{ipaddr}/{cidr}\n",
+        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBytes}  {bandwidthDownBytes}",
+	"min-length": 19,
+	"max-length": 19
+    },
+  "group/battery-grp": {
+    "orientation": "horizontal",
+    "modules": [
+      "battery",
+      "idle_inhibitor"
+    ]
+  },
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show drun",
+    "on-click-right": "killall rofi"
+  },
+  "custom/playerctl": {
+    "format": "<span>{icon}{}</span>",
+    "format-icons": {
+      "spotify": " ",
+      "default": "󰎇 "
+    },
+    "return-type": "json",
+    "max-length": 32,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} ~ {{artist}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "~/.config/hypr/scripts/Volumecontrol.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volumecontrol.sh --dec",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "~/.config/waybar/bin/wlogout.sh",
+    "tooltip": false
+  },
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click",
+    "interval": 3600,
+    "return-type": "json",
+    "exec": "~/.config/waybar/bin/weather.py",
+    "exec-if": "ping wttr.in -c1",
+    "tooltip": true
+  },
+  "custom/separator#dot": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/separator#line": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/separator#blank": {
+    "format": "",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/separator#tab": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  }
+}
+  "hyprland/language": {
+   "format-en": " 🇸 EN",
+   "format-fa": " 🇷 FA"
+  },
+
