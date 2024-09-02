@@ -128,6 +128,7 @@ Here is a list of packages used in this setup:
 
 - [Fix kde apps not recognizing file associations](https://www.reddit.com/r/kde/comments/1bd313p/comment/l1jzfik/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 - [nemo_actions](https://github.com/smurphos/nemo_actions_and_cinnamon_scripts)
+- [Persian Font config](https://github.com/parchlinux/dotfiles/tree/main/font-config)
 - [Vimplug](https://github.com/junegunn/vim-plug)
 - [OhMyZsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k_ohmyzsh](https://github.com/romkatv/powerlevel10k)
