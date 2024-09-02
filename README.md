@@ -1,4 +1,4 @@
-## Purple 💜
+# Purple 💜
 
 <details> 
 <summary>Screenshot 🖥️</summary>
